@@ -1,5 +1,4 @@
 import express, { Application } from "express";
-import helmet from "helmet";
 import cors from "cors";
 import compression from "compression";
 
@@ -18,7 +17,6 @@ class App {
   plugins(): void {
     this.app.use(express.json());
     this.app.use(cors());
-    this.app.use(helmet());
     this.app.use(compression());
   }
 
